@@ -2,7 +2,6 @@ import 'package:clipboard/clipboard.dart';
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import '../../constant.dart';
 import '../../controller/Api.dart';
 import '../widget/CategoriesButton.dart';
@@ -31,7 +30,7 @@ class _CategoriesState extends State<Categories> {
                     fontSize:fontxlarg,
                   ),
                 ),
-              ),
+              ),//*category screen title
               Container(
                 height: MediaQuery.of(context).size.height/14,
                 child: ListView(
@@ -66,7 +65,7 @@ class _CategoriesState extends State<Categories> {
                                 borderRadius: BorderRadius.only(topLeft: Radius.circular(25),topRight: Radius.circular(25),),
                                 color:Colors.cyan,
                               ),
-                            ), //myimage
+                            ), //news image
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text("${snapshot.data[index].title}",textAlign: TextAlign.center,
@@ -75,7 +74,7 @@ class _CategoriesState extends State<Categories> {
                                   fontWeight: FontWeight.w700,
                                 ),
                               ),
-                            ) ,  //mytext
+                            ) ,  //*news title text
                             Row(
                               children: [
                                 Padding(
@@ -87,7 +86,7 @@ class _CategoriesState extends State<Categories> {
                                     icon: Icon(Icons.share_rounded,size: 25,),
                                     hoverColor:Color.fromRGBO(0, 0, 0, 0.05),
                                   ),
-                                ),
+                                ),//*share
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: IconButton(
@@ -100,11 +99,11 @@ class _CategoriesState extends State<Categories> {
                                     icon: Icon(Icons.copy_rounded ,size:25 ,),
                                     hoverColor:Color.fromRGBO(0, 0, 0, 0.05),
                                   ),
-                                ),
+                                ),//*copy
                                 Padding(
                                   padding: const EdgeInsets.only(left: 180.0),
                                   child: Text("${snapshot.data[index].publishedAt}",textAlign: TextAlign.right,),
-                                ),
+                                ),//*open link
                               ],
                             ),
 
